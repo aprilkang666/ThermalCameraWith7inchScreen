@@ -1,0 +1,6 @@
+sudo apt update
+sudo apt install -y ffmpeg v4l-utils
+# Make sure the resolution of the camera
+v4l2-ctl -d /dev/video0 --list-formats-ext
+# Pull up the camera
+ffplay -f v4l2 -input_format yuyv422 -video_size 640x512 -framerate 30 /dev/video0
