@@ -1,0 +1,13 @@
+# --- Thermal kiosk recommended config ---
+
+[all]
+# Modern graphics stack (recommended; better for DSI/Wayland)
+dtoverlay=vc4-kms-v3d
+
+# If you use Waveshare 7" DSI display, enable it:
+# dtoverlay=vc4-kms-dsi-7inch
+
+disable_overscan=1
+max_framebuffer=2
+
+# USB webcam/thermal cam does NOT need dtoverlay (it uses /dev/video0)
